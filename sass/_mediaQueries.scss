@@ -1,0 +1,35 @@
+@media (max-width:700px) {
+    .showcase {
+        height: 100%;
+        padding: 2rem 0;
+
+        nav {
+            margin-bottom: 3rem;
+        }
+
+        li {
+            display: none;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+
+            .btn-primary {
+                margin: 2rem 1rem;
+            }
+
+            .btn-secondary {
+                margin: 2rem 1rem;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,84 @@
+@import 'config';
+@import 'container';
+@import 'buttons';
+@import 'marginAndPadding';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $light-color;
+    font-family: $font-stack;
+    line-height: 1.5;
+}
+
+
+img {
+    width: 100%;
+}
+
+.showcase {
+    @include set-background-color($backgroundColor);
+    height: 657px;
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 7rem;
+
+        a {
+            text-decoration: none;
+            color: set-text-color($backgroundColor);
+            padding: .4rem .5rem;
+            font-weight: 700;
+        }
+
+        .logo {
+            font-size: 35px;
+            font-weight: 999;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;
+
+            li {
+                padding: 15px;
+
+
+                a:hover {
+                    background-color: lighten($primary-color, 20%);
+                    color: set-text-color($backgroundColor);
+                    border-radius: 8px;
+                    transform: scale(.99);
+                }
+            }
+        }
+    }
+
+    // & - will be the parent name of class this will get compile as a showcase.
+    &-content {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            font-size: 50px;
+            text-transform: capitalize;
+            line-height: 1.5;
+        }
+
+        img {
+            width: 80%;
+        }
+    }
+}
+
+@import 'mediaQueries';

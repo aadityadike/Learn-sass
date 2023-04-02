@@ -1,0 +1,31 @@
+// Variables
+$light-color : #f8f8f8;
+$dark-color : #141414;
+$font-stack : Arial,
+Helvetica,
+sans-serif;
+$backgroundColor: #3d0909;
+$primary-color: #290404;
+$secondary-color: #cfbcbc;
+
+
+// set color of text based on background.
+@function set-text-color($color) {
+
+    // If color is lighter than 70 then return black text. 
+    @if(lightness($color) > 70) {
+        @return #000000;
+    }
+
+    @else {
+        @return #ffffff;
+    }
+}
+
+
+// Mixins allow you to define styles that can be re-used throughout your styleSheet.
+// set background & text color. 
+@mixin set-background-color($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}

@@ -1,0 +1,19 @@
+$spaceAmounts : (1, 2, 3, 4, 5);
+
+@each $space in $spaceAmounts {
+    .m-#{$space} { // class m1-1
+        margin:#{$space}rem; // margin:1 rem
+    }
+
+    .my-#{$space} {
+        margin:#{$space}rem 0;
+    }
+
+    .p-#{$space} {
+        margin:#{$space}rem;
+    }
+
+    .py-#{$space} {
+        margin:#{$space}rem 0;
+    }
+}

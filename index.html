@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Learn About SASS</title>
+  </head>
+  <body>
+    <header class="showcase">
+      <div class="container">
+        <nav class="my-1">
+          <a class="logo" href="/index.html">Learn SASS</a>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+          </ul>
+        </nav>
+
+        <div class="showcase-content">
+          <div>
+            <h1>CSS with superpowers</h1>
+            <h2 class="my-3">
+              Sass is the most mature, stable, and powerful professional grade
+              CSS extension language in the world.
+            </h2>
+            <button id="theme" class="btn-primary light-theme">
+              Dark Theme
+            </button>
+            <button class="btn-secondary">Sign Up</button>
+          </div>
+          <img
+            src="https://i0.wp.com/wallpapercave.com/wp/wp4288213.jpg?w=1200&ssl=1"
+            alt="kaguya-sama-love-is-war"
+          />
+        </div>
+      </div>
+    </header>
+    <script>
+      const theme = document.getElementById("theme");
+      theme.addEventListener("click", () => {
+        if (theme.innerText == "Dark Theme") {
+          theme.innerText = "Light Theme";
+          theme.className = "btn-primary light-theme";
+        } else {
+          theme.innerText = "Dark Theme";
+          theme.className = "btn-primary dark-theme";
+        }
+      });
+    </script>
+  </body>
+</html>
